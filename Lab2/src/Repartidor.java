@@ -1,9 +1,9 @@
-public class repartidor{
+public class Repartidor{
     private String  id_repartidor;
     private String nombre;
     private String telefono;
 
-    public repartidor(String id_repartidor,String nombre,String telefono){
+    public Repartidor(String id_repartidor,String nombre,String telefono){
         this.id_repartidor=id_repartidor;
         this.nombre=nombre;
         this.telefono=telefono;
@@ -20,8 +20,8 @@ public class repartidor{
         return telefono;
     }
      public boolean equals(Object o) {
-        if (o instanceof repartidor) {
-            repartidor otro = (repartidor) o;
+        if (o instanceof Repartidor) {
+            Repartidor otro = (Repartidor) o;
             return id_repartidor.equals(otro.id_repartidor);
         }
         return false;
