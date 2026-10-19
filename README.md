@@ -10,4 +10,4 @@ Equipo: Simon Ramirez, Andres Jaimes y Santiago Lara
    
 5. En las clases Pedido y Sede se crearon getters para llamarlos desde las otras clases. A sede se le creo el HashCode y el Equals igual que en el punto 2 para facilitar su búsqueda y poder evitar duplicados.
 
-6. Se crearon los enums canal para saber desde donde se trajo el usuario si es wpp, telefono o app. Y el enum EstadoPedido.
+6. Se crearon los enums canal para saber desde donde se trajo el usuario si es wpp, telefono o app. Y el enum EstadoPedido. Se agregaron estos como atributos en la clase Pedido con sus getters y setters.
