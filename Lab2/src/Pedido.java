@@ -38,10 +38,7 @@ public class Pedido {
 
     //Funcion getTotal
     public double getTotal() {
-        double total = 0;
-        for (Producto prod : productos) {
-            total += prod.getPrecio();
-        }
+        double total = Calculos.calcularTotal(productos);
         return total;
     }
 
