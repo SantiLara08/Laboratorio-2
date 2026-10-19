@@ -2,6 +2,8 @@ public class Repartidor{
     private String  id_repartidor;
     private String nombre;
     private String telefono;
+     private double calificacion;  
+    private int entregas;  
 
     public Repartidor(String id_repartidor,String nombre,String telefono){
         this.id_repartidor=id_repartidor;
@@ -18,6 +20,10 @@ public class Repartidor{
  
     public String getTelefono() {
         return telefono;
+    }
+     public void registrarEntrega(double nota) {
+        calificacion = (calificacion * entregas + nota) / (entregas + 1);
+        entregas = entregas + 1;
     }
      public boolean equals(Object o) {
         if (o instanceof Repartidor) {
