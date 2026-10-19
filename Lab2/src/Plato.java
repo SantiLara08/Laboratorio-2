@@ -2,7 +2,7 @@ public class Plato extends Producto{
     private double precio;
     private int tiempo_preparacion_mins;
 
-    public Plato(double precio, String nombre, int tiempo_preparacion_mins, int id_producto){
+    public Plato(double precio, String nombre, int tiempo_preparacion_mins, String id_producto){
         super(nombre, id_producto);
         this.precio = precio;
         this.tiempo_preparacion_mins = tiempo_preparacion_mins;

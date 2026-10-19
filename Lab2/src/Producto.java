@@ -1,17 +1,17 @@
 import java.util.Objects;
 
 public abstract class Producto {
-    private int id_producto;
+    private String id_producto;
     private String nombre;
 
-    public Producto(String nombre, int id_producto){
+    public Producto(String nombre, String id_producto){
         this.nombre = nombre;
         this.id_producto = id_producto;
     }
 
     public abstract double getPrecio();
 
-    public int getId(){
+    public String getId(){
         return id_producto;
     }
 

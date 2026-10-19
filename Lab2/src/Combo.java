@@ -4,7 +4,7 @@ public class Combo extends Producto{
     private double descuento;
     private ArrayList<Producto> productos;
 
-    public Combo(String nombre, double descuento, int id_producto){
+    public Combo(String nombre, double descuento, String id_producto){
         super(nombre, id_producto);
         this.descuento = descuento;
         this.productos = new ArrayList<>();

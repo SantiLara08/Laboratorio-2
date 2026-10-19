@@ -2,7 +2,7 @@ public class Bebida extends Producto{
     private double precio;
     private int tamano_mililitros;
 
-    public Bebida(double precio, String nombre, int tamano_mililitros, int id_producto){
+    public Bebida(double precio, String nombre, int tamano_mililitros, String id_producto){
         super(nombre, id_producto);
         this.precio = precio;
         this.tamano_mililitros = tamano_mililitros;
