@@ -21,6 +21,15 @@ public class Repartidor{
     public String getTelefono() {
         return telefono;
     }
+    public double getCalificacion() {
+        return calificacion;
+    }
+ 
+    
+    public int getEntregas() {
+        return entregas;
+    }
+
      public void registrarEntrega(double nota) {
         calificacion = (calificacion * entregas + nota) / (entregas + 1);
         entregas = entregas + 1;
