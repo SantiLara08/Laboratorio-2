@@ -8,7 +8,7 @@ public class Pedido {
     private Sede sede;
     private List<Producto> productos;
 
-    public Pedido(String id, Cliente cliente, String sede) {
+    public Pedido(String id, Cliente cliente, Sede sede) {
         this.id = id;
         this.cliente = cliente;
         this.sede = sede;
@@ -27,14 +27,24 @@ public class Pedido {
         return cliente;
     }
     public Sede getSede() {
-        return sede;
+        return this.sede.getNombre();
     }
     public List<Producto> getProductos() {
         return productos;
     }
 
+    //Funcion getTotal
+    public double getTotal() {
+        double total = 0;
+        for (Producto prod : productos) {
+            total += prod.getPrecio();
+        }
+        return total;
+    }
 
-
-
+    @Override
+    public String toString() {
+        return "Pedido " + id + " de " + cliente.getNombre() + " en " + getSede() + " - Total: " + getTotal();
+    }
 }
 
