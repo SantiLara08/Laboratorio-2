@@ -8,3 +8,4 @@ Equipo: Simon Ramirez, Andres Jaimes y Santiago Lara
 
 4. Se creo una clase utlitiara para los calculos. Aqui aprovehchamos para usar PROGRAMACION FUNCIONAL y WILDCARDS. Usamos Wildcards en el argumento del metodo calcular total, en el cual hay un extends a producto, osea que recibe cualquier lista de clases de producto para abajo(plato,bebida,combo) Y usamos programacion funcional para obtener cada precio y sumarlo.
    
+5. En las clases Pedido y Sede se crearon getters para llamarlos desde las otras clases, se le creo el HashCode y el Equals igual que en el punto 2 para facilitar su búsqueda y poder evitar duplicados.
