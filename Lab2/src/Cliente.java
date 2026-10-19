@@ -1,11 +1,11 @@
 import java.util.Objects;
-public class cliente{
+public class Cliente{
    private String documento;
    private String nombre;
    private String correo;
    private String telefono;
 
-   public cliente(String documento,String nombre,String correo,String telefono){
+   public Cliente(String documento,String nombre,String correo,String telefono){
        this.documento=documento;
        this.nombre=nombre;
        this.correo=correo;
@@ -27,8 +27,8 @@ public class cliente{
         return telefono;
     }
     public boolean equals(Object o) {
-        if (o instanceof cliente) {
-            cliente otro = (cliente) o;
+        if (o instanceof Cliente) {
+            Cliente otro = (Cliente) o;
             return documento.equals(otro.documento);
         }
         return false;
