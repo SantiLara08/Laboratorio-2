@@ -19,4 +19,7 @@ public class repartidor{
     public String getTelefono() {
         return telefono;
     }
+     public int hashCode() {
+        return id_repartidor.hashCode();
+    }
 }
