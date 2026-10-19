@@ -26,8 +26,11 @@ public class Pedido {
     public Cliente getCliente() {
         return cliente;
     }
-    public Sede getSede() {
+    public String getNombreSede() {
         return this.sede.getNombre();
+    }
+    public Sede getSede() {
+        return sede;
     }
     public List<Producto> getProductos() {
         return productos;
