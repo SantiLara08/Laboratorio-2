@@ -19,9 +19,6 @@ public class repartidor{
     public String getTelefono() {
         return telefono;
     }
-     public int hashCode() {
-        return id_repartidor.hashCode();
-    }
      public boolean equals(Object o) {
         if (o instanceof repartidor) {
             repartidor otro = (repartidor) o;
