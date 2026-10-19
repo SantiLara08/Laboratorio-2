@@ -7,12 +7,16 @@ public class Pedido {
     private Cliente cliente;
     private Sede sede;
     private List<Producto> productos;
+    private Estado estado;
+    private Canal canal;
 
-    public Pedido(String id, Cliente cliente, Sede sede) {
+    public Pedido(String id, Cliente cliente, Sede sede, Estado estado, Canal canal) {
         this.id = id;
         this.cliente = cliente;
         this.sede = sede;
         this.productos = new ArrayList<>();
+        this.estado = estado;
+        this.canal = canal;
     }
 
     public void agregarProducto(Producto producto) {
@@ -35,11 +39,28 @@ public class Pedido {
     public List<Producto> getProductos() {
         return productos;
     }
+    public Estado getEstado() {
+        return estado;
+    }
+    public Canal getCanal() {
+        return canal;
+    }
 
     //Funcion getTotal
     public double getTotal() {
-        double total = Calculos.calcularTotal(productos);
+        double total = 0;
+        for (Producto prod : productos) {
+            total += prod.getPrecio();
+        }
         return total;
+    }
+
+    //Setters
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+    public void setCanal(Canal canal) {
+        this.canal = canal;
     }
 
     @Override
