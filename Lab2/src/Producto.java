@@ -22,7 +22,7 @@ public abstract class Producto {
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Producto producto)) return false;
-        return id_producto == producto.id_producto;
+        return id_producto.equals(producto.id_producto);
     }
 
     @Override
