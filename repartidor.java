@@ -22,4 +22,14 @@ public class repartidor{
      public int hashCode() {
         return id_repartidor.hashCode();
     }
+     public boolean equals(Object o) {
+        if (o instanceof repartidor) {
+            repartidor otro = (repartidor) o;
+            return id_repartidor.equals(otro.id_repartidor);
+        }
+        return false;
+    }
+       public int hashCode() {
+        return id_repartidor.hashCode();
+    }
 }
