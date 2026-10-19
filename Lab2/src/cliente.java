@@ -22,7 +22,7 @@ public class cliente{
     public String getCorreo() {
         return correo;
     }
- 
+
     public String getTelefono() {
         return telefono;
     }
