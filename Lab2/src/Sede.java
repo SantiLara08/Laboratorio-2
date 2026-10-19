@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Sede {
     private String id;
     private String nombre;
@@ -23,5 +25,17 @@ public class Sede {
     @Override
     public String toString() {
         return nombre + " " + direccion;
+    }
+    
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Sede sede)) return false;
+        return Objects.equals(id, sede.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
