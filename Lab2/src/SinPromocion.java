@@ -1,7 +1,7 @@
 public class SinPromocion implements Promocion {
 
     @Override
-    public int aplicar(double subtotal) {
+    public double aplicar(double subtotal) {
         return subtotal;
     }
 
