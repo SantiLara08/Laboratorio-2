@@ -18,3 +18,5 @@ Equipo: Simon Ramirez, Andres Jaimes y Santiago Lara
 9. Se creo la clase OrdenarMenu para ordenar el menu. Primero pone los productos del mas caro al mas barato, y si dos cuestan lo mismo, los ordena por nombre. Es igual a la de los repartidores.
 
 10. Se uso el patron strategy para las promociones. Pedido no sabe cual promocion tiene, solo llama aplicar. Entonces para una promocion nueva se crea una clase nueva y no se toca Pedido.
+
+11.Se uso el patron observer para avisar cuando un pedido cambia de estoad. Interesado es uan interfaz y se implementa en aviso. Pedido tiene una lista de interesados, y cuando cambia el estado avisa a todos.
