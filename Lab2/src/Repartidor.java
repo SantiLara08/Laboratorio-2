@@ -1,4 +1,4 @@
-public class Repartidor{
+public class Repartidor implements Comparable<Repartidor>{
     private String  id_repartidor;
     private String nombre;
     private String telefono;
@@ -10,31 +10,31 @@ public class Repartidor{
         this.nombre=nombre;
         this.telefono=telefono;
     }
-  public String getId_repartidor() {
+    public String getId_repartidor() {
         return id_repartidor;
     }
- 
+
     public String getNombre() {
         return nombre;
     }
- 
+
     public String getTelefono() {
         return telefono;
     }
     public double getCalificacion() {
         return calificacion;
     }
- 
-    
+
+
     public int getEntregas() {
         return entregas;
     }
 
-     public void registrarEntrega(double nota) {
+    public void registrarEntrega(double nota) {
         calificacion = (calificacion * entregas + nota) / (entregas + 1);
         entregas = entregas + 1;
     }
-     public boolean equals(Object o) {
+    public boolean equals(Object o) {
         if (o instanceof Repartidor) {
             Repartidor otro = (Repartidor) o;
             return id_repartidor.equals(otro.id_repartidor);
@@ -43,5 +43,10 @@ public class Repartidor{
     }
        public int hashCode() {
         return id_repartidor.hashCode();
+    }
+
+    @Override
+    public int compareTo(Repartidor otro_repartidor){
+        return nombre.compareTo(otro_repartidor.nombre);
     }
 }

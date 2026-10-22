@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public abstract class Producto {
+public abstract class Producto implements Comparable<Producto>{
     private String id_producto;
     private String nombre;
 
@@ -17,6 +17,11 @@ public abstract class Producto {
 
     public String getNombre(){
         return nombre;
+    }
+
+    @Override
+    public int compareTo(Producto otro_producto){
+        return nombre.compareTo(otro_producto.nombre);
     }
 
     @Override
