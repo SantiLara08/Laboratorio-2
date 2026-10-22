@@ -1,6 +1,6 @@
 import java.util.Comparator;
  
-public class ComparadorMejoresRepartidores implements Comparator<Repartidor> {
+public class Comparadormejoresrepartidores implements Comparator<Repartidor> {
  
     public int compare(Repartidor a, Repartidor b) {
         int resultado = Double.compare(b.getCalificacion(), a.getCalificacion());

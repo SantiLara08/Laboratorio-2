@@ -7,10 +7,10 @@ public class Pedido {
     private Cliente cliente;
     private Sede sede;
     private List<Producto> productos;
-    private Estado estado;
+    private EstadoPedido estado;
     private Canal canal;
 
-    public Pedido(String id, Cliente cliente, Sede sede, Estado estado, Canal canal) {
+    public Pedido(String id, Cliente cliente, Sede sede, EstadoPedido estado, Canal canal) {
         this.id = id;
         this.cliente = cliente;
         this.sede = sede;
@@ -39,7 +39,7 @@ public class Pedido {
     public List<Producto> getProductos() {
         return productos;
     }
-    public Estado getEstado() {
+    public EstadoPedido getEstado() {
         return estado;
     }
     public Canal getCanal() {
@@ -56,7 +56,7 @@ public class Pedido {
     }
 
     //Setters
-    public void setEstado(Estado estado) {
+    public void setEstado(EstadoPedido estado) {
         this.estado = estado;
     }
     public void setCanal(Canal canal) {
