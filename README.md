@@ -20,3 +20,5 @@ Equipo: Simon Ramirez, Andres Jaimes y Santiago Lara
 10. Se uso el patron strategy para las promociones. Pedido no sabe cual promocion tiene, solo llama aplicar. Entonces para una promocion nueva se crea una clase nueva y no se toca Pedido.
 
 11.Se uso el patron observer para avisar cuando un pedido cambia de estoad. Interesado es uan interfaz y se implementa en aviso. Pedido tiene una lista de interesados, y cuando cambia el estado avisa a todos.
+
+12. En el main se crearon datos de prueba y se responden las preguntas del pdf con streams. Tambien se muestara que un cliente no se duplica, que e pasa cuando se busca algo que no exsite, el menu ordenado de dos formas y el aviso caundo el estado de un pedido cambia.
