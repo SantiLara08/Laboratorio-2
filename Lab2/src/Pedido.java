@@ -9,6 +9,8 @@ public class Pedido {
     private List<Producto> productos;
     private EstadoPedido estado;
     private Canal canal;
+    private Promocion promocion;
+    private ArrayList<Interesado> interesados;
 
     public Pedido(String id, Cliente cliente, Sede sede, EstadoPedido estado, Canal canal) {
         this.id = id;
@@ -17,10 +19,16 @@ public class Pedido {
         this.productos = new ArrayList<>();
         this.estado = estado;
         this.canal = canal;
+        this.promocion = new SinPromocion();
+        this.interesados = new ArrayList<>();
     }
 
     public void agregarProducto(Producto producto) {
         productos.add(producto);
+    }
+
+    public void agregarInteresado(Interesado interesado) {
+        interesados.add(interesado);
     }
 
     //Getters
@@ -48,16 +56,18 @@ public class Pedido {
 
     //Funcion getTotal
     public double getTotal() {
-        double total = 0;
-        for (Producto prod : productos) {
-            total += prod.getPrecio();
-        }
-        return total;
+        return promocion.aplicar(Calculos.calcularTotal(productos));
     }
 
     //Setters
     public void setEstado(EstadoPedido estado) {
         this.estado = estado;
+        for (Interesado interesado : interesados) {
+            interesado.avisar(this);
+        }
+    }
+    public void setPromocion(Promocion promocion) {
+        this.promocion = promocion;
     }
     public void setCanal(Canal canal) {
         this.canal = canal;
