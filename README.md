@@ -16,4 +16,5 @@ Equipo: Simon Ramirez, Andres Jaimes y Santiago Lara
 
 8. Se creo la clase Registro, para guardar lcientes, productos, repartidores y pedidos, sin repetir la logica 4 veces. Usa genericos, colecciones(hashmap) para buscar rapido por el documento o id y evitar duplicados. Tambien cumple con Open/closed, porque permite agregar mas clases cuando se creen.
 9. Se creo la clase OrdenarMenu para ordenar el menu. Primero pone los productos del mas caro al mas barato, y si dos cuestan lo mismo, los ordena por nombre. Es igual a la de los repartidores.
-   
+
+10. Se uso el patron strategy para las promociones. Pedido no sabe cual promocion tiene, solo llama aplicar. Entonces para una promocion nueva se crea una clase nueva y no se toca Pedido.
